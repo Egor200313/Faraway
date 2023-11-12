@@ -1,0 +1,51 @@
+.extra-header {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  height: 94px;
+  width: 100%;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.dark {
+  background-color: #393939;
+}
+
+.search-params-box {
+  width: 600px;
+  height: 50px;
+  padding-left: 35px;
+  font-size: 18px;
+  line-height: 50px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  color: #626262;
+}
+
+.points {
+  display: inline;
+  color: black;
+}
+
+.search-page {
+  background-color: #393939;
+  margin-top: 150px;
+  min-height: 100vh;
+}
+
+.results-container {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.sorry {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}

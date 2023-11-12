@@ -1,0 +1,95 @@
+.login-box {
+  height: 372px;
+  width: 561px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10%;
+}
+
+.bigger {
+  height: 450px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+}
+
+.left-header:hover,
+.right-header:hover {
+  cursor: pointer;
+}
+
+.left-header,
+.right-header {
+  height: 100%;
+  width: 50%;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.left-header {
+  border-top-left-radius: 5px;
+}
+
+.right-header {
+  border-top-right-radius: 5px;
+}
+
+.inactive {
+  background-color: #d9d9d9;
+}
+
+.login-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-content form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-btn {
+  width: 80%;
+  margin-top: 44px;
+  background-color: #3c95ff;
+  color: #fff;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.form-btn:hover {
+  background-color: #1563c2;
+  cursor: pointer;
+}
+
+.form-btn:active {
+  background-color: #1156aa;
+}

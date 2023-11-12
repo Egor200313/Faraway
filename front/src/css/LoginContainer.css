@@ -1,0 +1,11 @@
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 56px;
+
+  background-image: url('../../img/geometrized_svg.svg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}

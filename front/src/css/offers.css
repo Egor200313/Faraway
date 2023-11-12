@@ -1,0 +1,150 @@
+.card {
+  width: 100%;
+  height: 244px;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 24px 10px 24px;
+  text-decoration: none;
+}
+
+.card-city {
+  font-size: 26px;
+  font-weight: 400;
+  width: 50%;
+  padding: 0 0 5px 0;
+}
+
+.card-price {
+  text-align: right;
+  width: 50%;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.card-dates {
+  font-style: italic;
+  font-size: 18px;
+  padding: 0 0 5px 0;
+}
+
+.offers-h {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.offers-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.card-btn {
+  width: 320px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.card:active {
+  background-color: #f8f9fa;
+  opacity: 0.7;
+}
+
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.select-input:hover {
+  cursor: pointer;
+}
+
+.date-input:hover {
+  cursor: pointer;
+}
+
+.more-btn {
+  width: 100%;
+  height: 63px;
+  background-color: white;
+  color: #000000;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  margin: auto;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background-color: #d9d9d9;
+}
+
+.more-btn:active {
+  background-color: #d3d3d3;
+}
+
+@media screen and (max-width: 1090px) {
+  .offers-container {
+    width: 680px;
+    margin: auto;
+  }
+
+  .card-btn {
+    background-color: white;
+  }
+
+  .card {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .offers-container {
+    width: 80%;
+  }
+
+  .card-btn {
+    width: 100%;
+    height: 150px;
+  }
+
+  .card-text {
+    padding: 0;
+    width: 90%;
+  }
+
+  .card {
+    background-position: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 597px) {
+  .card,
+  .card-btn {
+    height: 100px;
+  }
+}

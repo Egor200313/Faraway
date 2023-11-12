@@ -1,0 +1,241 @@
+.trip-entity {
+  width: 794px;
+  height: 129px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.trip-head {
+  height: 24px;
+  background-color: rgb(125, 195, 20);
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  line-height: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.airline {
+  font-size: 16px;
+  margin-left: 20px;
+  color: black;
+}
+
+.trip-date {
+  margin-right: 20px;
+}
+
+.trip-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+  padding: 12px 16px 16px;
+  flex-wrap: wrap;
+}
+
+.time {
+  display: flex;
+  width: 250px;
+}
+
+.stamp {
+  font-size: 21px;
+}
+
+.lit {
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+.port {
+  font-size: 12px;
+}
+
+.time-port {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-item {
+  border-bottom: 1px solid #212121;
+  height: 12px;
+  margin: 0 12px;
+  position: relative;
+  width: 36px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.baggage-info-box {
+  width: 224px;
+  margin: 0 4px;
+}
+
+.baggage-line {
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 4px;
+}
+
+.av {
+  margin-left: auto;
+}
+
+.price-select {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.price-route {
+  flex-direction: column;
+}
+
+.price {
+  font-size: 21px;
+  font-weight: 700px;
+}
+
+.direction {
+  color: #888;
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.select-btn,
+.selected-icon {
+  width: 70px;
+  margin-left: 15px;
+  height: 36px;
+}
+
+.select-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #3c95ff;
+  color: white;
+}
+
+.selected-icon {
+  text-align: center;
+}
+
+.success-select {
+  color: rgb(125, 195, 20);
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.select-btn:hover {
+  background-color: #1563c2;
+  cursor: pointer;
+}
+
+.select-btn:active {
+  background-color: #1156aa;
+}
+
+.layouts {
+  font-size: 12px;
+  width: 200px;
+}
+
+.lay-type {
+  color: green;
+}
+
+.bag-img {
+  height: 14px;
+  width: 14px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.handbag {
+  background-image: url('../../img/case.png');
+}
+
+.luggage {
+  height: 18px;
+  background-image: url('../../img/luggage.png');
+}
+
+@keyframes collapse {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(180deg);
+  }
+}
+@keyframes collapse-back {
+  from {
+    transform: rotateX(180deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.collapsed {
+  backface-visibility: hidden;
+  animation-name: collapse;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  transform: rotateX(180deg);
+}
+.collapsed-back {
+  backface-visibility: visible;
+  animation-name: collapse-back;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  transform: rotateX(180deg);
+}
+
+.hidden-child {
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.backside {
+  transform: rotateX(0deg);
+  border-radius: 10px;
+  width: 794px;
+  height: 129px;
+  background-color: white;
+  position: absolute;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont {
+  position: relative;
+}
+
+.dur {
+  margin-right: 10px;
+}
+
+.uppertext {
+  font-size: 10px;
+  color: green;
+  vertical-align: top;
+  padding-left: 2px;
+}

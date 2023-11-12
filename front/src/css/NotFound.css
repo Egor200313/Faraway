@@ -1,0 +1,13 @@
+.nf-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../../img/forest.jpg');
+  background-size: cover;
+}
+
+.nf-text {
+  font-size: 32px;
+  color: white;
+}

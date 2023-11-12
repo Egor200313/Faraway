@@ -1,0 +1,33 @@
+.form-input {
+  width: 100%;
+  background-color: #fff;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 5px;
+  margin-top: 0;
+  height: 53px;
+  font-size: 15px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.error {
+  border-color: red;
+  color: red;
+}
+
+.input-unit {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 35px;
+  position: relative;
+}
+
+.error-zone {
+  font-size: 12px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  color: red;
+}

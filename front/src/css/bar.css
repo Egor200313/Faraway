@@ -1,0 +1,16 @@
+.bar-container {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 3;
+}
+
+.filler {
+  height: 100%;
+  background-color: yellow;
+  text-align: right;
+  transition: width 1s ease-in-out;
+}

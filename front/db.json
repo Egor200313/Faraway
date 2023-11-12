@@ -1,0 +1,110 @@
+{
+  "offers": [
+    {
+      "id": 1,
+      "img_name": "moscow.jpg",
+      "city": "Moscow",
+      "price": "300.00",
+      "dates": "2-3 September"
+    },
+    {
+      "id": 2,
+      "img_name": "phuket.jpg",
+      "city": "Phuket",
+      "price": "1300.00",
+      "dates": "2-3 October"
+    },
+    {
+      "id": 3,
+      "img_name": "vancouver.jpg",
+      "city": "Vancouver",
+      "price": "1000.00",
+      "dates": "6-7 August"
+    },
+    {
+      "id": 4,
+      "img_name": "london.jpg",
+      "city": "London",
+      "price": "500.00",
+      "dates": "8-10 July"
+    },
+    {
+      "id": 5,
+      "img_name": "new_york.jpg",
+      "city": "New York",
+      "price": "400.00",
+      "dates": "10-14 July"
+    },
+    {
+      "id": 6,
+      "img_name": "tenerife.jpg",
+      "city": "Tenerife",
+      "price": "1500.00",
+      "dates": "8-10 May"
+    },
+    {
+      "id": 7,
+      "img_name": "tenerife.jpg",
+      "city": "Tenerife",
+      "price": "1500.00",
+      "dates": "8-10 May"
+    },
+    {
+      "id": 8,
+      "img_name": "tenerife.jpg",
+      "city": "Tenerife",
+      "price": "1500.00",
+      "dates": "8-10 May"
+    }
+  ],
+  "search_results": [
+    {
+      "id": 1,
+      "deptime": "10:30 am",
+      "airport_from": "SVO",
+      "airport_to": "JFK",
+      "price": "300.00",
+      "duration": "3 h 0 min"
+    },
+    {
+      "id": 2,
+      "deptime": "11:30 pm",
+      "airport_from": "DME",
+      "airport_to": "JFK",
+      "price": "400.00",
+      "duration": "10 h 0 min"
+    },
+    {
+      "id": 3,
+      "deptime": "17:30 pm",
+      "airport_from": "DME",
+      "airport_to": "TFS",
+      "price": "1400.00",
+      "duration": "3 h 0 min"
+    },
+    {
+      "id": 4,
+      "deptime": "08:30 pm",
+      "airport_from": "DXB",
+      "airport_to": "SVO",
+      "price": "500.00",
+      "duration": "7 h 0 min"
+    },
+    {
+      "id": 5,
+      "deptime": "02:20 am",
+      "airport_from": "DME",
+      "airport_to": "LAX",
+      "price": "2400.00",
+      "duration": "12 h 0 min"
+    },
+    {
+      "id": 6,
+      "deptime": "07:00 pm",
+      "airport_from": "SVO",
+      "airport_to": "CDG",
+      "price": "200.00",
+      "duration": "4 h 0 min"
+    }
+  ]
+}
