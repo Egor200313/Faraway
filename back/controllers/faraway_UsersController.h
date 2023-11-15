@@ -1,7 +1,9 @@
 #pragma once
 
-#include "model/requests.hpp"
 #include <drogon/HttpController.h>
+
+#include "model/requests.h"
+#include "model/requests.cc"
 
 using namespace drogon;
 
