@@ -5,7 +5,7 @@ export function ajaxService(url, params = {}) {
 }
 
 export function ajaxAuthService(url, params = {}) {
-  return fetch(`${process.env.REACT_APP_API}/api` + url, params).then(
+  return fetch(`http://localhost:8080` + url, params).then(
     (data) => {
       if (data.ok) {
         return data.json();
@@ -24,7 +24,7 @@ export function ajaxMainService(url, params = {}) {
       headers: { ...params.headers, Authorization: `Bearer ${accessToken}` },
     };
   }
-  return fetch(`${process.env.REACT_APP_API}/api` + url, newParams).then(
+  return fetch(`http://localhost:8080` + url, newParams).then(
     (data) => {
       if (data.status === 401 && window.localStorage.getItem('REFRESH')) {
         ajaxAuthService('/token/refresh/', {
@@ -50,7 +50,7 @@ export function ajaxMainService(url, params = {}) {
             },
           };
 
-          fetch(`${process.env.REACT_APP_API}/api` + url, newParams).then(
+          fetch(`http://localhost:8080` + url, newParams).then(
             (data) => {
               if (data.ok) {
                 return data.json();
@@ -69,7 +69,7 @@ export function ajaxMainService(url, params = {}) {
   );
 }
 
-export function ajaxTicketService(url, params = {}) {
+export function ajaxSimpleService(url, params = {}) {
   let accessToken = window.localStorage.getItem('ACCESS');
   let newParams = params;
   if (accessToken) {
@@ -78,7 +78,8 @@ export function ajaxTicketService(url, params = {}) {
       headers: { ...params.headers, Authorization: `${accessToken}` },
     };
   }
-  return fetch(`${process.env.REACT_APP_API}/api` + url, newParams).then(
+  console.log(process.env.REACT_APP_API)
+  return fetch(`http://localhost:8080` + url, newParams).then(
     (data) => {
       if (data.ok) {
         return data.json();

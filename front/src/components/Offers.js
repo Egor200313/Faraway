@@ -84,8 +84,12 @@ export function Offers(props) {
 
   const user = useSelector((state) => state.user.user);
 
+  const params = {
+    from: user ? user.city : DEFAULT_CITY,
+  };
+
   useEffect(() => {
-    dispatch(getOffers('s'));
+    dispatch(getOffers(params));
   }, []);
 
   return (

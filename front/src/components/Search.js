@@ -32,14 +32,14 @@ export function SearchPage(props) {
           {flights ? (
             flights.map((item, idx) => {
               const arrival = calculateArrival(
-                item.dep_time,
-                item.route.duration_hours
+                item.flight.depTime,
+                item.flight.route.durationMinutes
               );
               return (
                 <Flight
                   id={item.id}
                   key={item.id}
-                  flight={item}
+                  ticket={item}
                   arrival={arrival}
                   collapse={collapseTicket}
                 />

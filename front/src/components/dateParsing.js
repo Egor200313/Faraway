@@ -37,7 +37,8 @@ export const normalizeDate = (date) => {
 
 export const calculateArrival = (date, duration) => {
   let dt = new Date(date);
-  let newts = dt.getTime() + duration * 3600000;
+  let duration_hours = Math.floor(duration / 60);
+  let newts = dt.getTime() + duration_hours * 3600000 + (duration - duration_hours * 60) * 60000;
   dt.setTime(newts);
   return dt;
 };
@@ -47,3 +48,9 @@ export const floatToHours = (duration) => {
   let minutes = Math.floor((duration - hours) * 60);
   return hours + ' hrs ' + minutes + ' min';
 };
+
+export const minutesToHoursMinutes = (duration) => {
+  let hours = Math.floor(duration / 60);
+  let minutes = duration - hours * 60;
+  return hours + ' hrs ' + minutes + ' min';
+}

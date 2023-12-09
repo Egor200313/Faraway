@@ -1,7 +1,7 @@
 import '../css/Flight.css';
 import moment from 'moment';
 import { useNavigate } from 'react-router-dom';
-import { floatToHours } from './dateParsing';
+import { minutesToHoursMinutes } from './dateParsing';
 import { ajaxMainService } from '../service/ajaxService';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
@@ -10,14 +10,14 @@ import { Checkmark } from 'react-checkmark';
 export function Flight(props) {
   const [purchased, setPurchased] = useState(false);
   const user = useSelector((state) => state.user.user);
-  const [deptime, deppart] = moment(props.flight.dep_time)
+  const [deptime, deppart] = moment(props.ticket.flight.depTime)
     .format('LT')
     .split(' ');
   const [artime, arpart] = moment(props.arrival).format('LT').split(' ');
 
   let extra_day = '';
   if (
-    moment(props.flight.dep_time).format('YYYYDDMM') !==
+    moment(props.ticket.flight.depTime).format('YYYYDDMM') !==
     moment(props.arrival).format('YYYYDDMM')
   ) {
     extra_day = moment(props.arrival).format('MMM D');
@@ -51,9 +51,9 @@ export function Flight(props) {
       </div>
       <div className="trip-entity" id={props.id}>
         <div className="trip-head">
-          <div className="airline">Faraway Airways </div>
+          <div className="airline">{props.ticket.flight.airline} </div>
           <div className="trip-date">
-            {moment(props.flight.dep_time).format('MMM Do YYYY')}
+            {moment(props.ticket.flight.depTime).format('MMM Do YYYY')}
           </div>
         </div>
         <div className="trip-content">
@@ -65,7 +65,7 @@ export function Flight(props) {
                   <span className="lit">{deppart}</span>
                 </span>
               </div>
-              <div className="port">{props.flight.route.origin.name}</div>
+              <div className="port">{props.ticket.flight.route.origin.name}</div>
             </div>
             <div className="line-item"></div>
             <div className="time-port">
@@ -76,27 +76,27 @@ export function Flight(props) {
                   {extra_day && <span className="uppertext">{extra_day}</span>}
                 </span>
               </div>
-              <div className="port">{props.flight.route.destination.name}</div>
+              <div className="port">{props.ticket.flight.route.destination.name}</div>
             </div>
           </div>
           <div className="baggage-info-box">
             <div>
               <div className="baggage-line">
                 <div className="bag-img handbag"></div>
-                <span>Carry-on baggage: 1 pc</span>
-                <span className="av">included</span>
+                <span>Carry-on baggage:</span>
+                <span className="av">{props.ticket.luggageKg} kg</span>
               </div>
               <div className="baggage-line">
                 <div className="bag-img luggage"></div>
                 <span>Checked baggage</span>
-                <span className="av">not included</span>
+                <span className="av">{props.ticket.handLuggageKg} kg</span>
               </div>
             </div>
           </div>
           <div className="price-select">
             <div className="price-route">
               <span className="price">
-                <span>$ {props.flight.price.toFixed(2)}</span>
+                <span>$ {props.ticket.price.toFixed(2)}</span>
               </span>
 
               <div className="direction">One way</div>
@@ -125,7 +125,7 @@ export function Flight(props) {
             </div>
             <div className="trip-time">
               <span className="dur">
-                {floatToHours(props.flight.route.duration_hours)}
+                {minutesToHoursMinutes(props.ticket.flight.route.durationMinutes)}
               </span>
               duration
             </div>

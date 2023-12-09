@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { ajaxService, ajaxTicketService } from '../../service/ajaxService';
+import { ajaxService, ajaxSimpleService } from '../../service/ajaxService';
 
 const initialState = {
   flights: [],
@@ -11,7 +11,7 @@ export const getFlights = createAsyncThunk(
   async (params, { dispatch }) => {
     dispatch(setComplete(0));
 
-    ajaxTicketService(`/search/?` + new URLSearchParams(params)).then(
+    ajaxSimpleService(`/search?` + new URLSearchParams(params)).then(
       (data) => {
         dispatch(setFlights(data));
         dispatch(setComplete(100));

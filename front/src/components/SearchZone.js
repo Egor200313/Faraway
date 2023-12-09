@@ -19,8 +19,8 @@ export function SearchZone(props) {
     e.preventDefault();
 
     const params = {
-      origin: values.from.toUpperCase(),
-      destination: values.to.toUpperCase(),
+      from: values.from.toUpperCase(),
+      to: values.to.toUpperCase(),
       date: values.date.toUpperCase(),
     };
 
@@ -46,7 +46,7 @@ export function SearchZone(props) {
         <form onSubmit={search}>
           <input
             type="text"
-            name="origin"
+            name="from"
             className="text-input first-input no-focus-decoration"
             placeholder="From"
             value={values.from || ''}
@@ -56,7 +56,7 @@ export function SearchZone(props) {
           <div className="plane-zone"></div>
           <input
             type="text"
-            name="destination"
+            name="to"
             className="text-input no-focus-decoration"
             placeholder="To"
             value={values.to || ''}

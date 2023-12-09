@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { ajaxMainService } from '../../service/ajaxService';
+import { ajaxSimpleService } from '../../service/ajaxService';
 
 const initialState = {
   offers: [],
@@ -24,8 +24,8 @@ function shuffle(array) {
 
 export const getOffers = createAsyncThunk(
   'offers/getOffers',
-  async (_, { dispatch }) => {
-    ajaxMainService(`/offers/`).then((data) => {
+  async (params, { dispatch }) => {
+    ajaxSimpleService(`/offers/`+ params.from).then((data) => {
       shuffle(data);
       dispatch(setOffers(data));
     });
