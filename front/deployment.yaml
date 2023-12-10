@@ -15,5 +15,6 @@ spec:
       containers:
       - name: faraway-front
         image: egych/faraway-front
+        imagePullPolicy: Always
         ports:
         - containerPort: 80

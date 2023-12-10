@@ -12,7 +12,7 @@ export function useRegister({
   handleLogin,
 }) {
   const handleRegister = () => {
-    ajaxAuthService('/customer/', {
+    ajaxAuthService('/register/', {
       method: 'POST',
       body: JSON.stringify({
         email: email,
