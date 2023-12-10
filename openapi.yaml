@@ -35,14 +35,12 @@ paths:
           required: True
           schema:
             type: string
-            pattern: ^[A-Z]{3}$
         - name: to
           description: 'The destination airport city. Dubai for example'
           in: query
           required: True
           schema:
             type: string
-            pattern: ^[A-Z]{3}$
         - name: date
           description: 'Departure date'
           in: query
