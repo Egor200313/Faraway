@@ -27,7 +27,7 @@ export function ajaxMainService(url, params = {}) {
   return fetch(`${process.env.REACT_APP_API}` + url, newParams).then(
     (data) => {
       if (data.status === 401 && window.localStorage.getItem('REFRESH')) {
-        ajaxAuthService('/refresh/', {
+        ajaxAuthService('/refresh', {
           headers: {
             'Content-Type': 'application/json',
           },

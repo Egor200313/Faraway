@@ -62,7 +62,7 @@ function OfferCard(props) {
     <button className="card-btn" to="/search" onClick={handleClick}>
       <div
         className="card"
-        style={{ backgroundImage: `url(${props.offer.image})` }}
+        style={{ backgroundImage: `url(http://localhost:8888/images/${props.offer.photoUrl})` }}
       >
         <div className="card-text">
           <div className="card-city">{props.offer.city}</div>

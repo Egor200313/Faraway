@@ -12,13 +12,13 @@ export function useRegister({
   handleLogin,
 }) {
   const handleRegister = () => {
-    ajaxAuthService('/register/', {
+    ajaxAuthService('/register', {
       method: 'POST',
       body: JSON.stringify({
         email: email,
         password: password,
-        first_name: firstname,
-        last_name: lastname,
+        firstName: firstname,
+        lastName: lastname,
         phone: phone,
         city: city,
         country: country,

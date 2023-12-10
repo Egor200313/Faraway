@@ -14,7 +14,7 @@ export function useLogin({ email, password, setError, from_registration }) {
       return;
     }
 
-    ajaxAuthService('/token/', {
+    ajaxAuthService('/login', {
       method: 'POST',
       body: JSON.stringify({ email: email, password: password }),
       headers: {
@@ -22,8 +22,8 @@ export function useLogin({ email, password, setError, from_registration }) {
       },
     })
       .then((data) => {
-        window.localStorage.setItem('ACCESS', data.access);
-        window.localStorage.setItem('REFRESH', data.refresh);
+        window.localStorage.setItem('ACCESS', data.accessToken);
+        window.localStorage.setItem('REFRESH', data.refreshToken);
         if (!from_registration) {
           navigate('/');
           window.location.reload();
