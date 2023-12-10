@@ -30,14 +30,14 @@ paths:
       operationId: getFlightsOnDate
       parameters:
         - name: from
-          description: 'The origin airport code. DME for example'
+          description: 'The origin airport city. Moscow for example'
           in: query
           required: True
           schema:
             type: string
             pattern: ^[A-Z]{3}$
         - name: to
-          description: 'The destination airport code. DXB for example'
+          description: 'The destination airport city. Dubai for example'
           in: query
           required: True
           schema:
@@ -103,8 +103,120 @@ paths:
                 $ref: '#/components/schemas/Offers'
         '404':
           description: invalid city of origin
+  /register:
+    post:
+      tags:
+        - customer
+      summary: Register new customer
+      description: ''
+      operationId: register
+      requestBody:
+        description: Create a new customer
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserPost'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserGet'
+  /customer:
+    patch:
+      tags:
+        - customer
+      summary: Update customer
+      description: ''
+      operationId: update
+      requestBody:
+        description: Update customer
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserGet'
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserGet'
 components:
   schemas:
+    UserGet:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 123
+        first_name:
+          type: string
+          example: "John"
+        last_name:
+          type: string
+          example: "Snow"
+        phone:
+          type: string
+          pattern: ^\+[1-9]-[0-9]{3}-[0-9]{3}-[0-9]{4}$
+          example: "+1-234-567-8999"
+        email:
+          type: string
+          example: "john@gmail.com"
+        city:
+          type: string
+          example: "Moscow"
+        country:
+          type: string
+          example: "Russian Federation"
+    UserPatch:
+      type: object
+      properties:
+        first_name:
+          type: string
+          example: "John"
+        last_name:
+          type: string
+          example: "Snow"
+        phone:
+          type: string
+          pattern: ^\+[1-9]-[0-9]{3}-[0-9]{3}-[0-9]{4}$
+          example: "+1-234-567-8999"
+        email:
+          type: string
+          example: "john@gmail.com"
+        city:
+          type: string
+          example: "Moscow"
+        country:
+          type: string
+          example: "Russian Federation"
+    UserPost:
+      type: object
+      properties:
+        first_name:
+          type: string
+          example: "John"
+        last_name:
+          type: string
+          example: "Snow"
+        phone:
+          type: string
+          pattern: ^\+[1-9]-[0-9]{3}-[0-9]{3}-[0-9]{4}$
+          example: "+1-234-567-8999"
+        email:
+          type: string
+          example: "john@gmail.com"
+        city:
+          type: string
+          example: "Moscow"
+        country:
+          type: string
+          example: "Russian Federation"
+        password:
+          type: string
+          example: "pwd"
     Offer:
       type: object
       properties:
@@ -118,6 +230,9 @@ components:
         photo_url:
           type: string
           example: "new_york.jpg"
+        price:
+          type: number
+          example: 100.00
         departure_date:
           type: string
           pattern: ^[0-9]{4}-[0-9]{2}-[0-9]{2}$
