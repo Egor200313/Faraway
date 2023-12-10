@@ -58,7 +58,6 @@ function OfferCard(props) {
     window.scrollTo(0, 0);
     navigate('/search');
   };
-
   return (
     <button className="card-btn" to="/search" onClick={handleClick}>
       <div
@@ -68,7 +67,7 @@ function OfferCard(props) {
         <div className="card-text">
           <div className="card-city">{props.offer.city}</div>
           <div className="card-price">$ {props.offer.price.toFixed(2)}</div>
-          <div className="card-dates">{props.offer.dates}</div>
+          <div className="card-dates">{props.offer.departureDate} - {props.offer.arrivalDate}</div>
         </div>
       </div>
     </button>
